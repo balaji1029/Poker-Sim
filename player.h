@@ -10,8 +10,11 @@ using namespace std;
 
 class Player {
     float confidence;
+    Pile cards;
+    Pile showPile;
     
     int getAmount();
+    void getCards();
 };
 
 #endif

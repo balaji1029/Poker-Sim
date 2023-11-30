@@ -1,4 +1,4 @@
-#include "pile.h"
+#include "poker.h"
 
 Pile::Pile() {
     for(int i=0; i<4; i++) {

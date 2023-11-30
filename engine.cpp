@@ -1,4 +1,4 @@
-#include "engine.h"
+#include "poker.h"
 
 Engine::Engine(int n) : playerCount(n), betAmount(0){
     gameIndex = 0;
@@ -27,6 +27,8 @@ Engine::Engine(int n) : playerCount(n), betAmount(0){
     for (int i=0; i<5; i++) {
         this -> showPile.push_back(deck.chooseCard());
     }
+
+    cout << "Deck size is " << deck.size << '\n';
 
     cout << "Showing the first two cards..." << '\n';
     this -> showCard();

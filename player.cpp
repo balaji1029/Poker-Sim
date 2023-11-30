@@ -1,4 +1,4 @@
-#include "player.h"
+#include "poker.h"
 
 Player::Player() {}
 

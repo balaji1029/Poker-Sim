@@ -12,15 +12,17 @@ using namespace std;
 
 class Engine {
     vector<card> showPile;
+    vector<card> showedPile;
+    vector<Player> players;
     vector<Pile> playerCards;
-    vector<Player>
     float betAmount;
-    int playerCount; 
+    int playerCount;
     vector<float> bets;
     int gameIndex;
 
     public:
     Engine(int n);
+    void showCard();
 };
 
 #endif

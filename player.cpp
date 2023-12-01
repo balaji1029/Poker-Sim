@@ -1,9 +1,8 @@
 #include "poker.h"
 
-Player::Player() : bet(0), name("Default Player") {
-}
+Player::Player() : name("Default Player"), bet(0), recentBet(0) {}
 
-Player::Player(string name) : name(name), bet(0) {}
+Player::Player(string name) : name(name), bet(0), recentBet(0) {}
 
 void Player::getPlayerCards(vector<card> cards) {
     this -> cards = Pile(cards);
@@ -26,10 +25,10 @@ void Player::getPlayers(vector<Player*> players) {
 void Player::getBetAmount() {
     srand(time(NULL));
     // cwait(1);
-    float beT = (float) rand() / RAND_MAX;
-    beT *= 100;
-    this -> recentBet = beT;
-    this -> bet += beT;
+    float random = (float) rand() / RAND_MAX;
+    random *= 100;
+    this -> recentBet = random;
+    this -> bet += random;
 }
 
 ostream & operator<<(ostream & ost, Player player) {

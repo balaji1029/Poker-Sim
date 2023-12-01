@@ -27,6 +27,10 @@ void Pile::addCard(card p) {
     this -> size++;
 }
 
+card & Pile::operator[] (int const i) {
+    return this -> pile[i];
+}
+
 ostream & operator<<(ostream & ost, card c) {
     string s = "";
     switch (c.second) {
